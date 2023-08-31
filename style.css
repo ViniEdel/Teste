@@ -1,0 +1,1304 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Oswald:wght@400;700&family=Poppins:wght@400;600;800&display=swap');
+
+*,
+::before,
+::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+ul,
+ul.nav {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    cursor: pointer;
+    color: inherit;
+}
+
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    width: 100%;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #fff;
+    padding: 35px 100px 0;
+}
+
+header h2 span {
+    color: #1d44b8;
+}
+
+header ul.nav {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+}
+
+header ul.nav li {
+    margin: 0 15px;
+}
+
+header ul.nav li:first-child {
+    margin-left: 0;
+}
+
+header ul.nav li:last-child {
+    margin-right: 0;
+}
+
+section {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 110px 100px;
+    color: #000;
+}
+
+
+
+
+/*--------Tela inicial Começo-------------*/
+
+.banner {
+    position: relative;
+    justify-content: center;
+    min-height: 100vh;
+    color: #eeeeee;
+    text-align: center;
+    padding: 110px 100px;
+}
+
+.banner .banner-img {
+    background-image: url(./img/Header/fundo2.jpeg);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    z-index: -1;
+    background-position: center center;
+}
+
+.banner .banner-img::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    opacity: .7;
+}
+
+.banner h1 {
+    margin-bottom: 5px;
+    font-size: 65px;
+    text-transform: uppercase;
+    font-family: 'Cinzel', serif;
+}
+
+.banner h1 span {
+    color: #1d44b8;
+}
+
+.banner h3 {
+    margin-top: 0px;
+    font-size: 20px;
+    font-weight: 100;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+.arrow-down-container {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+}
+
+.arrow-down img {
+    width: 60px;
+    animation: bounce 2s infinite;
+    cursor: pointer;
+}
+
+@keyframes bounce {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .banner {
+        padding: 80px 5%;
+    }
+
+    .logo {
+        height: 80px;
+    }
+
+    .banner h1 {
+        font-size: 40px;
+    }
+
+    .banner h3 {
+        font-size: 16px;
+    }
+}
+
+/*--------Tela inicial Fim-------------*/
+
+
+
+/*-----------Header Começo---------*/
+
+.fundo {
+    position: relative;
+    justify-content: center;
+    min-height: 100vh;
+    color: #eeeeee;
+    text-align: center;
+    padding: 110px 100px;
+}
+
+.fundo .fundo-img {
+    background-image: url(./img/Header/Fundo\ Alisson.jpg);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    z-index: -1;
+    background-position: center center;
+}
+
+.fundo .fundo-img::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    opacity: .8;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    position: absolute;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0);
+    transition: background-color 0.3s ease-in-out;
+    z-index: 9999;
+    position: fixed;
+}
+
+.nav-mobile {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    display: none;
+}
+
+#logo {
+    width: 100px;
+}
+
+.header i {
+    display: none;
+}
+
+
+.header-live {
+    background-color: #0a0b09;
+}
+
+.scrolled {
+    background-color: #0a0b09
+        /* Altere para a cor desejada */
+}
+
+
+
+.nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+}
+
+
+.nav ul li {
+    margin-right: 20px;
+}
+
+.nav ul li:last-child {
+    margin-right: 0;
+}
+
+.nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: color 0.2s ease-in-out;
+}
+
+.nav ul li a:hover {
+    color: #1d44b8;
+}
+
+.content-text {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 200px;
+    padding-right: 5px
+}
+
+.content-text .text h1 {
+    text-transform: uppercase;
+    font-family: 'Cinzel', serif;
+    font-size: 100px;
+    color: #fff;
+
+}
+
+.content-text .text span {
+    color: #1d44b8;
+}
+
+.btn-saiba {
+    display: inline-block;
+    padding: .75rem 1.25rem;
+    margin-right: 100px;
+    border-radius: 10rem;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 1rem;
+    letter-spacing: .15rem;
+    transition: all .3s;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.btn-saiba:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #666;
+    border-radius: 10rem;
+    z-index: -2;
+}
+
+.btn-saiba:before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    background-color: #1d44b8;
+    transition: all .3s;
+    border-radius: 10rem;
+    z-index: -1;
+}
+
+.btn-saiba:hover {
+    color: #fff;
+}
+
+.btn-saiba:hover:before {
+    width: 100%;
+}
+
+
+
+
+/*-----------Header FIM---------*/
+
+
+
+/*-----------Welcome Começo---------*/
+.welcome {
+    background-color: #0a0b09;
+    width: 100%;
+    height: 600px;
+    display: flex;
+    align-items: center;
+}
+
+
+.content-welcome {
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+}
+
+.content-welcome-text {
+    flex: 1;
+    color: #fff;
+    margin-right: 100px;
+}
+
+.content-welcome-text h1 {
+    font-size: 56px;
+    text-transform: uppercase;
+    font-family: 'Cinzel', serif
+}
+
+.content-welcome-text span {
+    color: #1d44b8;
+    font-family: 'Cinzel', serif
+}
+
+.content-welcome-text h2 {
+    font-size: 32px;
+    margin-top: -15px;
+    font-family: 'Cinzel', serif
+}
+
+.content-inner {
+    margin-top: 30px;
+}
+
+.content-inner p {
+    margin-bottom: 3px;
+    font-size: 16px;
+    font-family: 'Cinzel', serif;
+}
+
+.content-inner a {
+    margin-right: 10px;
+    font-size: 24px;
+}
+
+.img-piva {
+    width: auto;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+    overflow: hidden;
+    border-radius: 7px;
+    margin-left: 40px;
+}
+
+.img-piva img {
+    height: 100%;
+}
+
+
+/*-----------Welcome FIM---------*/
+
+
+
+/*-----------Participe Começo---------*/
+.atividades {
+    background-color: #0a0b09;
+    width: 100%;
+    height: auto;
+}
+
+.atividades-text h1 {
+    color: #fff;
+    font-family: 'Cinzel', serif;
+    font-size: 36px;
+    font-weight: bold;
+    position: relative;
+}
+
+.atividades-text h1::after {
+    content: '';
+    display: block;
+    width: 155px;
+    height: 2px;
+    background-color: #15509e;
+    /* Cor da linha */
+    position: absolute;
+    bottom: 5px;
+    /* Distância da linha para o texto */
+    left: 0;
+    left: 10px;
+}
+
+.atividades-content {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 120px;
+}
+
+
+.atividades-content .avisos,
+.atividades-content .online,
+.atividades-content .missoes,
+.atividades-content .forms {
+    flex: 1;
+    background-color: #222321;
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 70px;
+    margin-right: 50px;
+    height: 380px;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+}
+
+
+
+.atividades-content h1 {
+    font-size: 24px;
+    margin-bottom: 30px;
+    font-family: 'Cinzel', serif;
+    color: #fff;
+
+}
+
+.atividades-content p {
+    font-size: 16px;
+    margin-top: 5px;
+    font-family: 'Cinzel', serif;
+    color: #fff;
+}
+
+.atividades-content img {
+    width: 70px;
+    position: absolute;
+    top: 20px;
+}
+
+.atividades-content .link {
+    position: absolute;
+    bottom: 60px;
+}
+
+.link {
+    display: inline-block;
+    padding: .75rem 1.25rem;
+    border-radius: 10rem;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 1rem;
+    letter-spacing: .15rem;
+    transition: all .3s;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.link:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #666;
+    border-radius: 10rem;
+    z-index: -2;
+}
+
+.link:before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    background-color: #1d44b8;
+    transition: all .3s;
+    border-radius: 10rem;
+    z-index: -1;
+}
+
+.link:hover {
+    color: #fff;
+}
+
+.link:hover:before {
+    width: 100%;
+}
+
+
+.atividades-content {
+    overflow: hidden;
+}
+/*-----------Participe Começo---------*/
+
+
+
+/*-----------Celula Começo---------*/
+.celula {
+    position: relative;
+    height: 400px;
+    overflow: hidden;
+    margin-bottom: -50px;
+}
+
+.celula::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 120%;
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.9)), url('./img/Celula/celula.png');
+    background-size: cover;
+    background-position-x: center;
+    background-position-y: 40%;
+    z-index: -1;
+    transform: translateY(-20%);
+    transition: transform 0.3s ease;
+}
+
+.celula.active::before {
+    transform: translateY(0);
+}
+
+.celula h1,
+.celula p {
+    position: relative;
+    z-index: 1;
+}
+
+.celula h1 {
+    font-size: 72px;
+    color: #ffffff;
+    font-family: 'Cinzel', serif;
+}
+
+.celula p {
+    font-size: 16px;
+    color: #1d44b8;
+    font-family: 'Cinzel', serif;
+    margin-top: -15px;
+}
+
+.celula .link2 {
+    position: absolute;
+    bottom: 100px;
+}
+
+.link2 {
+    display: inline-block;
+    padding: .75rem 1.25rem;
+    border-radius: 10rem;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 1rem;
+    letter-spacing: .15rem;
+    transition: all .3s;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.link2:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #666;
+    border-radius: 10rem;
+    z-index: -2;
+}
+
+.link2:before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    background-color: #1d44b8;
+    /* Alterei o valor para tornar mais visível */
+    transition: all .3s;
+    border-radius: 10rem;
+    z-index: -1;
+}
+
+.link2:hover {
+    color: #fff;
+}
+
+.link2:hover:before {
+    width: 100%;
+}
+/*-----------Celula FIM---------*/
+
+
+
+/*-----------Eventos Começo---------*/
+
+
+
+.eventos {
+    background-color: #0a0b09;
+    color: #fff;
+    padding: 120px 0;
+    text-align: center;
+
+}
+
+.eventos-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+}
+
+.eventos-text h1 {
+    font-size: 36px;
+    font-family: 'Cinzel', serif;
+    margin-bottom: 40px;
+}
+
+.evento {
+    display: flex;
+    align-items: center;
+    max-width: 800px;
+    margin: 0 auto;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.evento-img {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+}
+
+
+.evento-img img {
+    max-width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3 ease;
+}
+
+.evento:hover .evento-img {
+    transform: escale(1.05);
+}
+
+.evento-info {
+    flex: 2;
+    padding: 20px;
+    text-align: left;
+}
+
+.evento-info h2 {
+    font-size: 24px;
+    font-family: 'Cinzel', serif;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.evento-info p {
+    font-size: 16px;
+    font-family: 'Cinzel', serif;
+    margin-bottom: 8px;
+}
+
+.saiba-mais {
+    display: inline-block;
+    padding: 8px 20px;
+    background-color: #1d44b8;
+    color: #fff;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.saiba-mais:hover {
+    background-color: #15509e;
+}
+/*-----------Eventos FIM---------*/
+
+
+/*-----------APP Começo---------*/
+
+
+
+.app {
+    background-color: #1d44b8;
+    width: 100%;
+    min-height: 60vh;
+    position: relative;
+    overflow: hidden;
+}
+
+.app app-section {
+    margin-bottom: 100px;
+}
+
+.app-text {
+    margin-bottom: 20px;
+}
+
+.app-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-top: 20px;
+    margin-right: 320px;
+    flex-grow: 1;
+}
+
+.app-infos-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.app-infos-group {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 20px;
+    margin-right: 20px;
+}
+
+.app-app {
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+}
+
+.app-app img {
+    width: 200px;
+    margin-top: 180px;
+    margin-right: 40px;
+}
+
+
+.app-text h1 {
+    font-size: 36px;
+    font-family: 'Cinzel', serif;
+    color: #ffffff;
+}
+
+.app-infos1,
+.app-infos2,
+.app-infos3,
+.app-infos4 {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    width: 100%;
+    margin-bottom: 30px;
+    font-family: 'Cinzel', serif;
+}
+
+.app-infos1 img,
+.app-infos2 img,
+.app-infos3 img,
+.app-infos4 img {
+    width: 50px;
+    height: auto;
+    margin-right: 20px;
+}
+
+.app-infos1 p,
+.app-infos2 p,
+.app-infos3 p,
+.app-infos4 p {
+    font-size: 16px;
+    color: #ffffff;
+    margin-top: 10px;
+}
+
+.app-celular {
+
+    position: absolute;
+    top: 150px;
+    right: 350px;
+}
+
+.app-celular img {
+    width: 300px;
+}
+/*-----------APP FIM---------*/
+
+
+
+/*-----------Footer Começo---------*/
+.footer {
+    background-color: #0a0b09;
+    color: #fff;
+    padding: 40px 0;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-logo img {
+    height: 40px;
+}
+
+.footer-logo p {
+    align-items: center;
+    margin-left: 5px;
+    color: #1d44b8;
+}
+
+.footer-nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.footer-nav a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.2s ease-in-out;
+}
+
+.footer-nav a:hover {
+    color: #1d44b8
+}
+
+.footer-social a {
+    color: #fff;
+    font-size: 24px;
+    margin-right: 20px;
+    transition: color 0.3s;
+}
+
+.footer-social a:hover {
+    color: #a9a9a9;
+}
+
+.footer-credit {
+    text-align: center;
+    margin-top: 40px;
+    color: #fff;
+    font-size: 14px;
+}
+/*-----------Footer FIM---------*/
+
+
+/*-----------Header Responsivo Small Começo---------*/
+
+@media (max-width: 990px){
+    .fundo {
+    position: relative;
+    justify-content: center;
+    min-height: 100vh;
+    color: #eeeeee;
+    text-align: center;
+    padding: 110px 100px;
+}
+
+.fundo .fundo-img {
+    background-image: url(./img/Header/Fundo\ Alisson.jpg);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    z-index: -1;
+    background-position: center center;
+}
+
+.fundo .fundo-img::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    opacity: .8;
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 20px;
+    position: absolute;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0);
+    transition: background-color 0.3s ease-in-out;
+    z-index: 9999;
+    position: fixed;
+}
+
+.header-live {
+    background-color: #0a0b09;
+}
+
+.scrolled {
+    background-color: #0a0b09
+        /* Altere para a cor desejada */
+}
+
+
+.logo-inicio img {
+    height: 60px;
+}
+
+
+.nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+
+.nav ul li {
+    margin-right: 20px;
+}
+
+.nav ul li:last-child {
+    margin-right: 0;
+}
+
+.nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 1rem;
+    transition: color 0.2s ease-in-out;
+}
+
+.nav ul li a:hover {
+    color: #1d44b8;
+}
+
+.content-text {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 200px;
+    padding-right: 5px
+}
+
+.content-text .text h1 {
+    text-transform: uppercase;
+    font-family: 'Cinzel', serif;
+    font-size: 100px;
+    color: #fff;
+
+}
+
+.content-text .text span {
+    color: #1d44b8;
+}
+
+.btn-saiba {
+    display: inline-block;
+    padding: .75rem 1.25rem;
+    margin-right: 100px;
+    border-radius: 10rem;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 1rem;
+    letter-spacing: .15rem;
+    transition: all .3s;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.btn-saiba:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #666;
+    border-radius: 10rem;
+    z-index: -2;
+}
+
+.btn-saiba:before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    background-color: #1d44b8;
+    transition: all .3s;
+    border-radius: 10rem;
+    z-index: -1;
+}
+
+.btn-saiba:hover {
+    color: #fff;
+}
+
+.btn-saiba:hover:before {
+    width: 100%;
+}
+}
+
+@media (max-width: 550px){
+    .fundo {
+        position: relative;
+        justify-content: center;
+        min-height: 100vh;
+        color: #eeeeee;
+        text-align: center;
+        padding: 110px 100px;
+    }
+    
+    .fundo .fundo-img {
+        background-image: url(./img/Header/Fundo\ Alisson.jpg);
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+        z-index: -1;
+        background-position: center center;
+    }
+    
+    .fundo .fundo-img::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #000;
+        opacity: .8;
+    }
+    
+    .header {
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 50px;
+        position: absolute;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0);
+        transition: background-color 0.3s ease-in-out;
+        z-index: 999;
+        position: absolute;
+    }
+
+    .header i {
+        font-size: 2rem;
+        cursor: pointer;
+    }
+
+    .nav-mobile {
+        display: flex;
+        justify-content: center;
+        width: 100vw;
+        height: 100vh;
+        top: 0;
+        right: 0;
+        margin-left: 100%;
+        z-index: -1;
+        position: fixed;
+        text-align: center;
+        font-size: 2rem;
+        background: #0a0b09;
+        align-items: center;
+    }
+
+    .nav-mobile ul {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        gap: 50px;
+    }
+
+    .header i {
+        display: block;
+    }
+    
+    
+    .header-live {
+        background-color: #0a0b09;
+    }
+    
+    .scrolled {
+        background-color: #0a0b09
+            /* Altere para a cor desejada */
+    }
+    
+    
+    .logo-inicio img {
+        height: 60px;
+    }
+    
+    
+    .nav ul {
+        list-style: none;
+        display: none;
+        gap: 1rem;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    
+    .nav ul li {
+        margin-right: 20px;
+    }
+    
+    .nav ul li:last-child {
+        margin-right: 0;
+    }
+    
+    .nav ul li a {
+        text-decoration: none;
+        color: #fff;
+        font-weight: bold;
+        text-transform: uppercase;
+        font-size: 1rem;
+        transition: color 0.2s ease-in-out;
+    }
+    
+    .nav ul li a:hover {
+        color: #1d44b8;
+    }
+    
+    .content-text {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        padding-bottom: 200px;
+        padding-right: 5px
+    }
+    
+    .content-text .text h1 {
+        text-transform: uppercase;
+        font-family: 'Cinzel', serif;
+        font-size: 100px;
+        color: #fff;
+    
+    }
+    
+    .content-text .text span {
+        color: #1d44b8;
+    }
+    
+    .btn-saiba {
+        display: inline-block;
+        padding: .75rem 1.25rem;
+        margin-right: 100px;
+        border-radius: 10rem;
+        color: #fff;
+        text-transform: uppercase;
+        font-size: 1rem;
+        letter-spacing: .15rem;
+        transition: all .3s;
+        position: relative;
+        overflow: hidden;
+        z-index: 1;
+    }
+    
+    .btn-saiba:after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #666;
+        border-radius: 10rem;
+        z-index: -2;
+    }
+    
+    .btn-saiba:before {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 0%;
+        height: 100%;
+        background-color: #1d44b8;
+        transition: all .3s;
+        border-radius: 10rem;
+        z-index: -1;
+    }
+    
+    .btn-saiba:hover {
+        color: #fff;
+    }
+    
+    .btn-saiba:hover:before {
+        width: 100%;
+    }
+
+
+}
+
+
+
+
