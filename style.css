@@ -229,7 +229,7 @@ section {
     position: fixed;
 }
 
-.nav-mobile {
+#nav {
     position: absolute;
     width: 100vw;
     height: 100vh;
@@ -988,6 +988,10 @@ section {
     position: fixed;
 }
 
+#nav {
+    display: none;
+}
+
 .header-live {
     background-color: #0a0b09;
 }
@@ -1155,14 +1159,13 @@ section {
         cursor: pointer;
     }
 
-    .nav-mobile {
-        display: flex;
+    #nav { 
+        display: none;
         justify-content: center;
         width: 100vw;
         height: 100vh;
         top: 0;
-        right: 0;
-        margin-left: 100%;
+        left: 0;
         z-index: -1;
         position: fixed;
         text-align: center;
@@ -1174,6 +1177,7 @@ section {
     .nav-mobile ul {
         display: flex;
         justify-content: center;
+        height: 100vh;
         flex-direction: column;
         gap: 50px;
     }

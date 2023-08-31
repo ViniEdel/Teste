@@ -162,12 +162,12 @@ function isElementInViewport(element) {
     delay: 500   
   });
 
+var nav = document.getElementById('nav');
 
-
-var menu = document.getElementById('menu');
-var nav = document.getElementById('nav-mobile');
-
-
-menu.addEventListener ('click', abrefechaMenu(){
-  if ()
-})
+function clickMenu() {
+  if(nav.style.display == 'none') {
+    nav.style.display = 'flex'
+  } else {
+    nav.style.display = 'none'
+  }
+};
